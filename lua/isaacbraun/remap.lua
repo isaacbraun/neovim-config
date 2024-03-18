@@ -21,11 +21,11 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- Yank into System Clipboard
 -- next greatest remap ever : asbjornHaland
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- Delete into void register
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- Never go into Q
 vim.keymap.set("n", "Q", "<nop>")
