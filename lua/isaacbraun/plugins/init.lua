@@ -1,7 +1,7 @@
 return {
-  {
-    "github/copilot.vim"
-  },
+  -- {
+  --   "github/copilot.vim"
+  -- },
   --[[ {
     "tpope/vim-commentary"
   }, ]]
