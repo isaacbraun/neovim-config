@@ -17,6 +17,21 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
+-- Change filetype to gotmpl if go html detected (https://neovim.io/doc/user/lua.html#vim.filetype.add())
+-- vim.filetype.add {
+--   pattern = {
+--     ['.html'] = {
+--       function(path, bufnr)
+--         local content = vim.api.nvim_buf_get_lines(bufnr, 0, 1, false)[1] or ''
+--         if vim.regex([[^#!.*\\<{{\\>]]):match_str(content) ~= nil then
+--           return 'mine'
+--         end
+--       end,
+--       { priority = -math.huge },
+--     },
+--   },
+-- }
+
 require("lazy").setup("isaacbraun.plugins")
 
 autocmd('LspAttach', {
@@ -38,3 +53,5 @@ autocmd('LspAttach', {
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
+
+vim.o.termguicolors = true
