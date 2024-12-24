@@ -36,6 +36,9 @@ vim.keymap.set("n", "Q", "<nop>")
 -- Format File
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
+--Unmap Ctrl + L for tmux navigator compatibility
+-- vim.keymap.set('n', '<C-l>', '<Nop>', { silent = true })
+
 -- Quick Fix Navigation
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
