@@ -52,6 +52,7 @@ return {
 				end,
 
 				["ts_ls"] = function()
+          -- https://kosu.me/blog/vue-nvim-lsp-config
 					-- 1. Import Mason Registry
 					local mason_registry = require("mason-registry")
 					local vue_language_server_path = mason_registry
