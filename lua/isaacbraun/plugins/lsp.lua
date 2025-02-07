@@ -28,11 +28,7 @@ return {
 		require("mason-lspconfig").setup({
 			ensure_installed = {
 				"lua_ls",
-				"tsserver",
-				-- "goimports",
-				-- "gofumpt",
-				-- "gomodifytags",
-				-- "impl",
+				"ts_ls",
 			},
 			handlers = {
 				function(server_name) -- default handler (optional)
@@ -52,6 +48,31 @@ return {
 								},
 							},
 						},
+					})
+				end,
+
+				["ts_ls"] = function()
+					-- 1. Import Mason Registry
+					local mason_registry = require("mason-registry")
+					local vue_language_server_path = mason_registry
+						.get_package("vue-language-server")
+						:get_install_path() .. "/node_modules/@vue/language-server"
+
+					-- 2. Import lspconfig
+					local lspconfig = require("lspconfig")
+
+					-- 3. Configure ts_ls for TypeScript and Vue
+					lspconfig.ts_ls.setup({
+						init_options = {
+							plugins = {
+								{
+									name = "@vue/typescript-plugin",
+									location = vue_language_server_path,
+									languages = { "vue" },
+								},
+							},
+						},
+						filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
 					})
 				end,
 			},
