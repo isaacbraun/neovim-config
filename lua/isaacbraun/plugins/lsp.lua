@@ -99,11 +99,14 @@ return {
 				{ name = "nvim_lsp" },
 			}, {
 				{ name = "buffer" },
-			}),
+			}, {
+        { name = "supermaven" },
+      }),
 		})
 
 		vim.diagnostic.config({
 			-- update_in_insert = true,
+      virtual_text = true,
 			float = {
 				focusable = false,
 				style = "minimal",
