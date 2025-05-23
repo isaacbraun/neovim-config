@@ -107,8 +107,8 @@ return {
 				{ name = "nvim_lsp" },
 			}, {
 				{ name = "buffer" },
-			}, {
-        { name = "supermaven" },
+			-- }, {
+   --      { name = "supermaven" },
       }),
 		})
 
