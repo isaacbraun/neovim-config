@@ -76,6 +76,14 @@ return {
 						filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
 					})
 				end,
+
+        ["mdx_analyzer"] = function ()
+          local lspconfig = require("lspconfig")
+          lspconfig.mdx_analyzer.setup({
+            filetypes = { "markdown.mdx", "mdx" },
+            capabilities = capabilities,
+          })
+        end
 			},
 		})
 
