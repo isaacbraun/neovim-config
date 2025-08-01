@@ -47,3 +47,9 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 -- Replace highlighted word throughout file
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- Open diagnostic message in float window
+vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float)
+-- Navigate through diagnostics in floating windows
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
