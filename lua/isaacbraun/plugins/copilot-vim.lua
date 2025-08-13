@@ -15,7 +15,6 @@ return {
 	-- Setup copilot.vim
 	{
 		"github/copilot.vim",
-		event = "VeryLazy",
 		config = function()
 			-- For copilot.vim
 			-- enable copilot for specific filetypes
