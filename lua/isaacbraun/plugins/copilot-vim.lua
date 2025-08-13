@@ -21,20 +21,19 @@ return {
 			-- vim.g.copilot_filetypes = {
 			--   ["TelescopePrompt"] = false,
 			-- }
-      -- Set workspace folders
-      -- vim.g.copilot_workspace_folders = "~/Projects"
-      -- keymap("i", "<C-y>", 'copilot#Accept("\\<CR>")', { expr = true, replace_keycodes = false })
+			-- Set workspace folders
+			-- vim.g.copilot_workspace_folders = "~/Projects"
 
 			-- Set to true to assume that copilot is already mapped
 			vim.g.copilot_assume_mapped = true
-      vim.g.copilot_no_tab_map = true
+			vim.g.copilot_no_tab_map = true
 
 			-- Setup keymaps
 			local keymap = vim.keymap.set
 			local opts = { silent = true }
 
-			-- Set <C-g> to accept Copilot suggestion
-			keymap("i", "<C-g>", 'copilot#Accept("\\<CR>")', { expr = true, silent = true, replace_keycodes = false })
+			-- Set <C-a> to accept Copilot suggestion
+      keymap("i", "<C-f>", 'copilot#Accept("\\<CR>")', { expr = true, silent = true, replace_keycodes = false })
 
 			-- Set <C-j> to next suggestion, <C-k> to previous suggestion, <C-l> to suggest
 			keymap("i", "<C-j>", "<Plug>(copilot-next)", opts)
