@@ -104,8 +104,8 @@ return {
       mapping = cmp.mapping.preset.insert({
         ["<C-b>"] = cmp.mapping.scroll_docs(-4),
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
-        ["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
-        ["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
+        ["<C-k>"] = cmp.mapping.select_prev_item(cmp_select),
+        ["<C-j>"] = cmp.mapping.select_next_item(cmp_select),
         ["<C-y>"] = cmp.mapping.confirm({ select = true }),
         ["<C-Space>"] = cmp.mapping.complete(),
       }),
@@ -133,7 +133,10 @@ return {
 
     -- `/` cmdline setup.
     cmp.setup.cmdline("/", {
-      mapping = cmp.mapping.preset.cmdline(),
+      mapping = cmp.mapping.preset.cmdline({
+        ["<C-k>"] = cmp.mapping(cmp.mapping.select_prev_item(cmp_select), { "c" }),
+        ["<C-j>"] = cmp.mapping(cmp.mapping.select_next_item(cmp_select), { "c" }),
+      }),
       sources = {
         { name = "buffer" },
       },
@@ -141,7 +144,10 @@ return {
 
     -- `:` cmdline setup.
     cmp.setup.cmdline(":", {
-      mapping = cmp.mapping.preset.cmdline(),
+      mapping = cmp.mapping.preset.cmdline({
+        ["<C-k>"] = cmp.mapping(cmp.mapping.select_prev_item(cmp_select), { "c" }),
+        ["<C-j>"] = cmp.mapping(cmp.mapping.select_next_item(cmp_select), { "c" }),
+      }),
       sources = cmp.config.sources({
         { name = "path" },
       }, {
