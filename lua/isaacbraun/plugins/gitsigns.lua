@@ -3,7 +3,6 @@ return {
   config = function()
     require("gitsigns").setup({
       current_line_blame = true,
-      word_diff = true,
     })
 
     vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk_inline<CR>", {})
@@ -13,5 +12,6 @@ return {
     vim.keymap.set("n", "<leader>rb", ":Gitsigns reset_buffer<CR>", {})
     vim.keymap.set("n", "<leader>nh", ":Gitsigns next_hunk<CR>", {})
     vim.keymap.set("n", "<leader>ph", ":Gitsigns prev_hunk<CR>", {})
+    vim.keymap.set("n", "<leader>wd", ":Gitsigns toggle_word_diff<CR>", {})
   end
 }
