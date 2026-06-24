@@ -6,6 +6,7 @@ return {
     })
 
     vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk_inline<CR>", {})
+    vim.keymap.set("n", "<leader>gb", ":Gitsigns blame<CR>", {})
     vim.keymap.set("n", "<leader>sh", ":Gitsigns stage_hunk<CR>", {})
     vim.keymap.set("n", "<leader>rh", ":Gitsigns reset_hunk<CR>", {})
     vim.keymap.set("n", "<leader>sb", ":Gitsigns stage_buffer<CR>", {})
