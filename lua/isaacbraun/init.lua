@@ -1,5 +1,6 @@
 require("isaacbraun.remap")
 require("isaacbraun.set")
+require("isaacbraun.commands")
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
