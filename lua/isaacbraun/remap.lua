@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 
 -- Move Highlighted lines up/down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -34,7 +34,7 @@ vim.keymap.set("n", "Q", "<nop>")
 --vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- Format File
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+vim.keymap.set("n", "<leader>fa", vim.lsp.buf.format)
 
 -- This doesn't work as intended: Unmap Ctrl + L for tmux navigator compatibility
 -- vim.keymap.set('n', '<C-l>', '<Nop>', { silent = true })
