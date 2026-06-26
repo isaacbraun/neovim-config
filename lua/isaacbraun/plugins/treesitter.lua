@@ -15,6 +15,8 @@ return {
 					"typescript",
 					"jsdoc",
 					"json",
+					"markdown",
+					"markdown_inline",
 					"go",
 					"gomod",
 					"gowork",
